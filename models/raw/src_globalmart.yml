@@ -7,6 +7,14 @@ sources:
     tables:
       - name: customer
       - name: orders
+        # test data coming from Snowflake
+        columns:
+          - name: orderid
+        tests:
+          - not_null
+          - unique
+            
+
       - name: product
 # if we had a column in 'product' named 'loadedat' -> a timestamp indicating when the data was
 # last updated, we could perform a data 'freshness test' as follows
@@ -19,4 +27,3 @@ sources:
 #              count: 12
 #              period: hour
 #          loaded_at_field: loadedat
-
