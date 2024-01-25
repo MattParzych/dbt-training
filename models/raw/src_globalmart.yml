@@ -13,8 +13,6 @@ sources:
         tests:
           - not_null
           - unique
-            
-
       - name: product
 # if we had a column in 'product' named 'loadedat' -> a timestamp indicating when the data was
 # last updated, we could perform a data 'freshness test' as follows
